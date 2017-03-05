@@ -12,18 +12,25 @@
         <link rel="stylesheet" href="./css/vs.min.css" /> 
         <link rel="stylesheet" type="text/css" href="./css/screen.css" /> 
         <meta name="referrer" content="origin" /> 
+
         @yield('linkcss')
     </head>
     <body>
-    
-
-        <div class="container">
-            @yield('content')
-        </div>
+        @yield('content')
+            <div class="copyright"> 
+   <div class="container"> 
+    <div class="row"> 
+     <div class="col-sm-12"> 
+      <span>Copyright &copy; <a href="http://www.ihelpi.cn/">博客群社区</a></span> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
     </body>
   <script src="./js/jquery.min.js"></script> 
   <script src="./js/bootstrap.min.js"></script> 
   <script src="./js/jquery.fitvids.min.js"></script> 
   <script src="./js/highlight.min.js"></script> 
+
 
 </html>

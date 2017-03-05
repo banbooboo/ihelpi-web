@@ -4,9 +4,19 @@ namespace App\Http\Controllers\user;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Store\IndexUserStore;
 
 class LoginController extends Controller
 {
+
+
+    public function __construct()
+    {
+        $this->IndexUser = new IndexUserStore();    // 获取用户Store层的对象
+    }
+
+
+
     /**
      * Display a listing of the resource.
      *
@@ -37,7 +47,22 @@ class LoginController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
+        // 获取所有表单提交
+        $data = $request->all();
+        //判断用户是否存在
+        $inLogin = $this->IndexUser->whetherRegister($data['user_name']);  
+        if(!$inLogin){
+            return view('/404')->with('info','用户不存在....')->with('url','/login');
+        }
+
+        $login =  $this->IndexUser->userLogin($data);  // 用户登录 
+       if(!$login){
+            return view('/404')->with('info','密码错误..')->with('url','/login');
+        }
+
+        return redirect('/');
+        
     }
 
     /**

@@ -20,3 +20,5 @@ Route::resource('/answer','user\AnswerController');
 Route::resource('/login','user\LoginController');
 
 Route::resource('/register','user\RegisterController');
+
+Route::get('/imagescode/{tmp}','user\RegisterController@imagesCode');
