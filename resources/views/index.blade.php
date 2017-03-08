@@ -38,9 +38,9 @@
        <ul class="menu"> 
         <li class="nav-current" role="presentation"><a href="/">首页</a></li> 
         <li role="presentation"><a href="/answer" title="Laravel问答社区" target="_blank">问答社区</a></li> 
-        <li role="presentation"><a href="http://www.ihelpi.cn/family" title="Laravel 博客集群" target="_blank">博客集群</a></li> 
-        <li role="presentation"><a href="http://www.ihelpi.cn/download" title="下载 ">下载工具</a></li> 
-        <li role="presentation"><a href="http://www.ihelpi.cn/docs" title="各种中文手册" target="_blank">各种中文手册</a></li> 
+        <li role="presentation"><a href="/family" title="Laravel 博客集群" target="_blank">博客集群</a></li> 
+        <li role="presentation"><a href="/download" title="下载 ">下载工具</a></li> 
+        <li role="presentation"><a href="/docs" title="各种中文手册" target="_blank">各种中文手册</a></li> 
         <li role="presentation"><a href="http://www.phpcomposer.com/" title="Composer 中文文档" target="_blank">Composer</a></li> 
        </ul> 
       </div> 
@@ -58,7 +58,7 @@
        <div class="post-head"> 
         <h1 class="post-title"><a href="/post/laravel-5-5-will-be-the-next-lts-release/">Laravel 5.5 将是下一个 LTS 版本，预计 7/8 月份发布</a></h1> 
         <div class="post-meta"> 
-         <span class="author">作者：<a href="/author/wangsai/">王赛</a></span> • 
+         <span class="author">作者：<a href="/author/wangsai/">banbooboo</a></span> • 
          <time class="post-date" datetime="2017年2月21日星期二凌晨3点21分" title="2017年2月21日星期二凌晨3点21分">2017年2月21日</time> 
         </div> 
        </div> 

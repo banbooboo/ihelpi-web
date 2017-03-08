@@ -22,3 +22,11 @@ Route::resource('/login','user\LoginController');
 Route::resource('/register','user\RegisterController');
 
 Route::get('/imagescode/{tmp}','user\RegisterController@imagesCode');
+
+Route::resource('/family','user\BlogListController');
+
+Route::resource('/download','user\DownLoadController');
+
+Route::resource('/docs','user\DocsController');
+
+Route::resource('/articles', 'user\PhotoController');
