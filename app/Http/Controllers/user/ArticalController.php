@@ -45,7 +45,7 @@ class ArticalController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
         Jieba::init();
         Finalseg::init();
         $title_list = Jieba::cut($request['title']);
@@ -60,7 +60,9 @@ class ArticalController extends Controller
         foreach ($content_list as $content) {
             $content_str .=$content.' ';
         }
-        $userId=\Session::get('userguid');
+//      //  $userId=\Session::get('userguid');
+//
+       $userId='a0aebb10c2214991b45476bc7b795a6f';
         if($userId){
             \DB::beginTransaction();    // 事物开始
             try{
@@ -74,14 +76,16 @@ class ArticalController extends Controller
                 $res=$res && $res1 && $res2;
                 if($res){
                     \DB::commit();
+                    return view('/404')->with('info','发布成功!..')->with('url','/');
+
                 }
             }catch(\PDOException $e){
                 \DB::rollback();
-                return view('404')->with('info','发布失败!..')->with('url','/articles');
-            };
+                return view('/404')->with('info','发布失败!..')->with('url','/articles');
+            }
         }
 
-        return view('404')->with('info','请先登陆!..')->with('url','/login');
+ return view('/404')->with('info','请先登陆!..')->with('url','/login');
 
     }
 

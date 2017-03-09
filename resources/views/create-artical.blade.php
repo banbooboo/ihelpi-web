@@ -49,6 +49,7 @@
        <hr /> 
        <form method="POST" action="/articles" accept-charset="UTF-8" id="article-create-form"> 
         <input type="hidden" name="_token" value="{{ csrf_token() }}" />
+
         <div class="form-group"> 
          <input class="form-control" id="topic-title" placeholder="请填写标题" name="title" type="text" value="" required="require" /> 
         </div>

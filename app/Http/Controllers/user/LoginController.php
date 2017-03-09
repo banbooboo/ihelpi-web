@@ -60,7 +60,10 @@ class LoginController extends Controller
        if(!$login){
             return view('/404')->with('info','密码错误..')->with('url','/login');
         }
-
+//        $uid=$this->IndexUser->getGuid($data['user_name']);
+//        $info=$this->IndexUser->getUserInfo($uid);
+//
+//        \ Session::put('indexlogin',$info);
         return redirect('/');
         
     }

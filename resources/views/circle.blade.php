@@ -55,7 +55,8 @@
     <!-- end 导航 --> 
     <!-- 用户栏 --> 
     <div class="aw-user-nav"> 
-     <!-- 登陆&注册栏 --> 
+     <!-- 登陆&注册栏 -->
+
      <span> <a class="register btn btn-normal btn-success" href="/register">注册</a> <a class="login btn btn-normal btn-primary" href="/login">登录</a> </span> 
      <!-- end 登陆&注册栏 --> 
     </div> 
