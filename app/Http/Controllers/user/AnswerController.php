@@ -4,9 +4,16 @@ namespace App\Http\Controllers\User;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-
+use App\Store\AnswerStore;
 class AnswerController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->Answers = new AnswerStore();    // 获取用户Store层的对象
+    }
+
+
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +21,11 @@ class AnswerController extends Controller
      */
     public function index()
     {
-        return view('circle');
+
+      $info=  $this->Answers->getAllAnswer()->toArray();
+       // dd($info);
+ return view('circle')->with('allAnswers',$info);
+        //return view('/404')->with('info',$info);
     }
 
     /**

@@ -45,7 +45,7 @@
     <div class="blog-pages"> 
      <div class="col-md-12 panel"> 
       <div class="panel-body"> 
-       <h2 class="text-center"> 创作文章</h2> 
+       <h2 class="text-center"> 问题帖子</h2>
        <hr /> 
        <form method="POST" action="/articles" accept-charset="UTF-8" id="article-create-form"> 
         <input type="hidden" name="_token" value="{{ csrf_token() }}" />

@@ -4,7 +4,7 @@
 
 @section('linkcss')
 
-<link rel="stylesheet" type="text/css" href="./css/bootstrap.css" />
+{{--<link rel="stylesheet" type="text/css" href="./css/bootstrap.css" />--}}
 <link rel="stylesheet" type="text/css" href="./css/icon.css" />
 
 <link href="./css/common20140930.css" rel="stylesheet" type="text/css" />
@@ -44,10 +44,7 @@
      </div> 
      <nav role="navigation" class="collapse navbar-collapse bs-navbar-collapse"> 
       <ul class="nav navbar-nav"> 
-       <li><a href="" class="active">发现</a></li> 
-       <!-- <li><a href="http://wenda.golaravel.com/question/" class="">问题</a></li>
-
-					<li><a href="http://wenda.golaravel.com/article/" class="">文章</a></li> --> 
+       <li><a href="" class="active">发现</a></li>
        <li><a href="http://wenda.golaravel.com/topic/">话题</a></li> 
       </ul> 
      </nav> 
@@ -85,56 +82,23 @@
        </div> 
        <!-- end 新消息通知 --> 
        <!-- tab切换 --> 
-       <ul class="nav nav-tabs aw-nav-tabs active hidden-xs"> 
-        <li><a href="/sort_type-unresponsive">等待回复</a></li> 
-        <li><a href="/sort_type-hot__day-7" id="sort_control_hot">热门</a></li> 
-        <li><a href="/is_recommend-1">推荐</a></li> 
-        <li class="active"><a href="">最新</a></li> 
-        <h2 class="hidden-xs"> 发现</h2> 
+       <ul class="nav nav-tabs aw-nav-tabs active hidden-xs">
+        <li class="active"><a href="">最新</a></li>
        </ul> 
        <!-- end tab切换 --> 
        <div class="aw-mod aw-explore-list"> 
         <div class="mod-body"> 
-         <div class="aw-common-list"> 
-          <div class="aw-item active" data-topic-id="246,1172,1173,"> 
-           <a class="aw-user-name hidden-xs" data-id="4707" href="http://wenda.golaravel.com/people/yaobaliu" rel="nofollow"><img src="http://wenda.golaravel.com/static/common/avatar-max-img.png" alt="" /></a> 
-           <div class="aw-question-content"> 
-            <h4> <a href="/question/2469">laravel ORM查询需要的字段的方法？不要 select * from 而是select id,name from</a> </h4> 
-            <a href="/question/2469#!answer_form" class="pull-right text-color-999">回复</a> 
-            <p> <a href="/people/yaobaliu" class="aw-user-name">yaobaliu</a> <span class="text-color-999">发起了问题 • 1 人关注 • 0 个回复 • 38 次浏览 • 1 天前 </span> <span class="text-color-999 related-topic hide"> • 来自相关话题</span> </p> 
-           </div> 
-          </div> 
-          <div class="aw-item active" data-topic-id="57,"> 
-           <a class="aw-user-name hidden-xs" data-id="5926" href="http://wenda.golaravel.com/people/strongthen" rel="nofollow"><img src="http://wenda.golaravel.com/uploads/avatar/000/00/59/26_avatar_max.jpg" alt="" /></a> 
-           <div class="aw-question-content"> 
-            <h4> <a href="/question/2468">怎么才可以快速的找到Laravel 框架中的某个类的位置呢？？</a> </h4> 
-            <a href="/question/2468#!answer_form" class="pull-right text-color-999">回复</a> 
-            <p> <a href="/people/strongthen" class="aw-user-name">strongthen</a> <span class="text-color-999">发起了问题 • 1 人关注 • 0 个回复 • 38 次浏览 • 1 天前 </span> <span class="text-color-999 related-topic hide"> • 来自相关话题</span> </p> 
-           </div> 
-          </div> 
-          <div class="aw-item " data-topic-id="214,"> 
-           <a class="aw-user-name hidden-xs" data-id="357" href="http://wenda.golaravel.com/people/ganto" rel="nofollow"><img src="http://wenda.golaravel.com/uploads/avatar/000/00/03/57_avatar_max.jpg" alt="" /></a> 
-           <div class="aw-question-content"> 
-            <h4> <a href="http://wenda.golaravel.com/question/249">请问 怎么限制分页列表列出的 项目数目</a> </h4> 
-            <div class="pull-right hidden-xs contribute"> 
-             <span class="pull-right text-color-999">贡献</span> 
-             <a class="aw-user-name" data-id="5417" href="http://wenda.golaravel.com/people/Eearnp" rel="nofollow"><img src="http://wenda.golaravel.com/uploads/avatar/000/00/54/17_avatar_mid.jpg" alt="" /></a> 
-             <a class="aw-user-name" data-id="5829" href="http://wenda.golaravel.com/people/oz" rel="nofollow"><img src="http://wenda.golaravel.com/uploads/avatar/000/00/58/29_avatar_mid.jpg" alt="" /></a> 
-            </div> 
-            <p> <a href="http://wenda.golaravel.com/people/oz" class="aw-user-name" data-id="5829">oz</a> <span class="text-color-999">回复了问题 • 4 人关注 • 5 个回复 • 1292 次浏览 • 2017-02-11 14:06 </span> <span class="text-color-999 related-topic hide"> • 来自相关话题</span> </p> 
-           </div> 
-          </div> 
-          <div class="aw-item " data-topic-id="230,"> 
-           <a class="aw-user-name hidden-xs" data-id="5840" href="http://wenda.golaravel.com/people/%E9%BB%84%E5%9F%94" rel="nofollow"><img src="http://wenda.golaravel.com/uploads/avatar/000/00/58/40_avatar_max.jpg" alt="" /></a> 
-           <div class="aw-question-content"> 
-            <h4> <a href="http://wenda.golaravel.com/question/2440">hasOne如何保证只有一条记录</a> </h4> 
-            <div class="pull-right hidden-xs contribute"> 
-             <span class="pull-right text-color-999">贡献</span> 
-             <a class="aw-user-name" data-id="5829" href="http://wenda.golaravel.com/people/oz" rel="nofollow"><img src="http://wenda.golaravel.com/uploads/avatar/000/00/58/29_avatar_mid.jpg" alt="" /></a> 
-            </div> 
-            <p> <a href="http://wenda.golaravel.com/people/oz" class="aw-user-name" data-id="5829">oz</a> <span class="text-color-999">回复了问题 • 2 人关注 • 1 个回复 • 126 次浏览 • 2017-02-10 13:50 </span> <span class="text-color-999 related-topic hide"> • 来自相关话题</span> </p> 
-           </div> 
-          </div> 
+         <div class="aw-common-list">
+          @foreach($allAnswers as $answer)
+           <div class="aw-item active" data-topic-id="1173">
+            <a class="aw-user-name hidden-xs" data-id="4707" href="http://wenda.golaravel.com/people/yaobaliu" rel="nofollow"><img src="http://wenda.golaravel.com/static/common/avatar-max-img.png" alt="" /></a>
+            <div class="aw-question-content">
+             <h4> <a href="/question/2469">{{ $answer->title }}</a> </h4>
+             <a href="/question/2469#!answer_form" class="pull-right text-color-999">回复</a>
+             <p> <a href="/people/{{ $answer->userId }}" class="aw-user-name">{{ $answer->username  }}</a> <span class="text-color-999">发起了问题  {{      date("d",time() -  $answer->addtime)    }}天前 </span> <span class="text-color-999 related-topic hide"> </span> </p>
+            </div>
+           </div>
+           @endforeach
          </div> 
         </div> 
         <div class="mod-footer"> 
@@ -279,26 +243,6 @@
      </div> 
     </div> 
    </div> 
-  </div> 
-  <div class="aw-footer-wrap"> 
-   <div class="aw-footer">
-     Copyright &copy; 2017, All Rights Reserved 
-    <span class="hidden-xs">Powered By <a href="http://www.wecenter.com/?copyright" target="blank">WeCenter 3.0 Beta 2</a></span> 
-   </div> 
-  </div> 
-  <a class="aw-back-top hidden-xs" href="javascript:;" onclick="$.scrollTo(1, 600, {queue:true});"><i class="icon icon-up"></i></a> 
-  <script type="text/javascript">
-var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fc8d13872a523d9c286aa7affbe0921f1' type='text/javascript'%3E%3C/script%3E"));
-</script> 
-  <!-- DO NOT REMOVE --> 
-  <div id="aw-ajax-box" class="aw-ajax-box"></div> 
-  <div style="display:none;" id="__crond"> 
-   <script type="text/javascript">
-		$(document).ready(function () {
-			$('#__crond').html(unescape('%3Cimg%20src%3D%22' + G_BASE_URL + '/crond/run/1488469539%22%20width%3D%221%22%20height%3D%221%22%20/%3E'));
-		});
-	</script> 
-  </div> 
+  </div>
 	
 @endsection

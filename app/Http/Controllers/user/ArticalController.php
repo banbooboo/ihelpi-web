@@ -63,17 +63,24 @@ class ArticalController extends Controller
 //      //  $userId=\Session::get('userguid');
 //
        $userId='a0aebb10c2214991b45476bc7b795a6f';
+        $username='1';
+        $addtime=time();
         if($userId){
             \DB::beginTransaction();    // 事物开始
             try{
                 $info = ['articalId'=>$articalId,'title'=>$title_str,'content'=>$content_str,'topicId'=>$topic,
-                    'topic'=>$topic,'userId'=>$userId];
-                $res = \DB::table('artical')->insert($info);
+                    'topic'=>$topic,'userId'=>$userId,'username'=>$username,'addtime'=>$addtime];
+                $res = \DB::table('artical_index')->insert($info);
                 $info1 = ['topicId' => $topic, 'articalId' => $articalId];
                 $res1 = \DB::table('rel_artical_topic')->insert($info1);
                 $info2 = ['articalId' => $articalId, 'userId' => $userId];
                 $res2 = \DB::table('rel_artical_user')->insert($info2);
-                $res=$res && $res1 && $res2;
+
+                $info3 = ['articalId'=>$articalId,'title'=>$request['title'],'content'=>$request['content'],'topicId'=>$topic,
+                    'topic'=>$topic,'userId'=>$userId,'username'=>$username,'addtime'=>$addtime];
+                $res3=\DB::table('artical_origin')->insert($info3);
+
+                $res=$res && $res1 && $res2 && $res3;
                 if($res){
                     \DB::commit();
                     return view('/404')->with('info','发布成功!..')->with('url','/');
