@@ -5,7 +5,7 @@
   <meta charset="UTF-8" /> 
   <title>创作文章</title> 
 
-  <link rel="stylesheet" href="./css/styles-4e2f1e29f3.css" /> 
+  <link rel="stylesheet" href="./css/styles-4e2f1e29f3.css" />
  </head> 
  <body id="body" class="articles-create"> 
   <div style="display: none;" 　　document.getelementbyid("typediv1").style.display="none" ;=""> 
@@ -15,8 +15,7 @@
    <div role="navigation" class="navbar navbar-default topnav"> 
     <div class="container"> 
      <div class="navbar-header"> 
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> 
-     
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
      </div> 
      <div id="top-navbar-collapse" class="collapse navbar-collapse"> 
       <ul class="nav navbar-nav"> 
@@ -49,11 +48,21 @@
        <h2 class="text-center"> 创作文章</h2> 
        <hr /> 
        <form method="POST" action="/articles" accept-charset="UTF-8" id="article-create-form"> 
-        <input type="hidden" name="_token" value="{{ csrf_token() }}" /> 
-        <input name="category_id" type="hidden" value="8" /> 
+        <input type="hidden" name="_token" value="{{ csrf_token() }}" />
         <div class="form-group"> 
          <input class="form-control" id="topic-title" placeholder="请填写标题" name="title" type="text" value="" required="require" /> 
-        </div> 
+        </div>
+        <div>
+         话题：
+
+          <input type="radio" name="topic"  value="C"> C
+          <input type="radio" name="topic"  value="JAVA"> JAVA
+          <input type="radio" name="topic"  value="Python"> Python
+          <input type="radio" name="topic"  value="JS"> JS
+          <input type="radio" name="topic"  value="Android"> Android
+         <input type="radio" name="topic"  value="other"> other
+        </div>
+        <hr>
         <textarea id="container" name="content">111</textarea>
         <div class="form-group status-post-submit"> 
          <button class="btn btn-primary" type="submit" name="subject" value="publish" id="">发 布</button>  

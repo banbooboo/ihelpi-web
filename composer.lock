@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "2815ea95210736569fd9b50b101f58fd",
-    "content-hash": "8b18c2192db08057c1524aa77ebe83e6",
+    "hash": "2ef16b293c5ce547541ecc933f54baca",
+    "content-hash": "494caa02d38bf1138529d48674e89ccf",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -150,6 +150,56 @@
             "time": "2016-11-02 15:56:58"
         },
         {
+            "name": "fukuball/jieba-php",
+            "version": "0.25",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fukuball/jieba-php.git",
+                "reference": "21c0a4d4cfdb1f1f25b0aecc88ffb4146768908c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://files.phpcomposer.com/files/fukuball/jieba-php/21c0a4d4cfdb1f1f25b0aecc88ffb4146768908c.zip",
+                "reference": "21c0a4d4cfdb1f1f25b0aecc88ffb4146768908c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">= 5.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.4.1",
+                "satooshi/php-coveralls": "dev-master",
+                "squizlabs/php_codesniffer": "1.5.6"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/class/Jieba.php",
+                    "src/class/JiebaAnalyse.php",
+                    "src/class/Finalseg.php",
+                    "src/class/Posseg.php",
+                    "src/vendor/multi-array/MultiArray.php",
+                    "src/vendor/multi-array/Factory/MultiArrayFactory.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "fukuball",
+                    "email": "fukuball@gmail.com"
+                }
+            ],
+            "description": "結巴中文分詞（PHP 版本）：做最好的 PHP 中文分詞、中文斷詞組件",
+            "keywords": [
+                "Jieba",
+                "php"
+            ],
+            "time": "2016-02-16 18:34:14"
+        },
+        {
             "name": "gregwar/captcha",
             "version": "v1.1.1",
             "source": {
@@ -196,6 +246,54 @@
                 "spam"
             ],
             "time": "2015-09-11 15:23:20"
+        },
+        {
+            "name": "iscms/alisms-for-laravel",
+            "version": "0.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ISCLOUDX/alisms.git",
+                "reference": "c713ea802993fb6dd5a0852e660cf7451ef98d39"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://files.phpcomposer.com/files/ISCLOUDX/alisms/c713ea802993fb6dd5a0852e660cf7451ef98d39.zip",
+                "reference": "c713ea802993fb6dd5a0852e660cf7451ef98d39",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "iscms\\Alisms\\": "src/",
+                    "iscms\\AlismsSdk\\": "src/vendor/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "秋綾",
+                    "email": "root@iscloudx.com"
+                }
+            ],
+            "description": "阿里大鱼laravel5封装包,提供简单明确的调用方法",
+            "homepage": "https://www.iscloudx.com",
+            "keywords": [
+                "alisms",
+                "bigfish",
+                "大鱼",
+                "短信接口",
+                "阿里云",
+                "阿里云大鱼短信",
+                "阿里云短信",
+                "阿里大鱼"
+            ],
+            "time": "2017-01-22 09:00:40"
         },
         {
             "name": "jakub-onderka/php-console-color",

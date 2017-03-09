@@ -176,7 +176,8 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-        Stevenyangecho\UEditor\UEditorServiceProvider::class
+        Stevenyangecho\UEditor\UEditorServiceProvider::class,
+        iscms\Alisms\AlidayuServiceProvider::class
 
     ],
 

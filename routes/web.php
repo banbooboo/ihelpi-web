@@ -29,4 +29,4 @@ Route::resource('/download','user\DownLoadController');
 
 Route::resource('/docs','user\DocsController');
 
-Route::resource('/articles', 'user\PhotoController');
+Route::resource('/articles', 'user\ArticalController');
