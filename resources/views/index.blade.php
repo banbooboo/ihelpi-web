@@ -39,7 +39,8 @@
         <li class="nav-current" role="presentation"><a href="/">首页</a></li> 
         <li role="presentation"><a href="/answer" title="Laravel问答社区" target="_blank">问答社区</a></li> 
         <li role="presentation"><a href="/family" title="Laravel 博客集群" target="_blank">博客集群</a></li> 
-        <li role="presentation"><a href="/download" title="下载 ">下载工具</a></li> 
+        <li role="presentation"><a href="/download" title="下载 ">下载工具</a></li>
+        <li role="presentation"><a href="/talk" title="下载 ">聊天室</a></li>
         <li role="presentation"><a href="/docs" title="各种中文手册" target="_blank">各种中文手册</a></li> 
         <li role="presentation"><a href="http://www.phpcomposer.com/" title="Composer 中文文档" target="_blank">Composer</a></li> 
        </ul> 

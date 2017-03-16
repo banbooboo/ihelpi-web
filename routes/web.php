@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::resource('/answer','user\AnswerController');
+Route::resource('/answer','user\ArticalController');
 
 Route::resource('/login','user\LoginController');
 
@@ -30,3 +30,5 @@ Route::resource('/download','user\DownLoadController');
 Route::resource('/docs','user\DocsController');
 
 Route::resource('/articles', 'user\ArticalController');
+
+Route::resource('/talk','user\TalkController');
