@@ -7,6 +7,17 @@
   <script type="text/javascript" src="./js/jquery.min.js"></script> 
   <script type="text/javascript" src="./js/bootstrap.min.js"></script> 
   <script src="./js/socket.io.js"></script> 
+  <style type="text/css">
+  #ems{position:absolute; z-index:5; display:none; top:0px; left:0px; max-width:230px; background-color:#F1F1F1; border:solid 1px #CCC; padding:5px;}
+#ems img{width:44px; height:44px; border:solid 1px #FFF; cursor:pointer;}
+#ems img:hover,#ems img:active{border-color:#A4B7E3;}
+#ems a{color:#069; border-radius:2px; display:inline-block; margin:2px 5px; padding:1px 8px; text-decoration:none; background-color:#D5DFFD;}
+#ems a:hover,#ems a:active,#ems a.ck{color:#FFF; background-color:#069;}
+.tc{text-align:center; margin-top:5px;}
+
+
+
+  </style>
  </head> 
  <body> 
   <div id="inputName" class="form-group"> 
@@ -21,6 +32,7 @@
     <form class="form"> 
      <div id="sendContent"> 
       <select id="sel_obj"><option value="allpeople">所有人</option></select> 
+      <span><img src="./img/sk/t.png" title="表情" id="imgbq"></span>
       <input id="m" maxlength="200" /> 
       <button id="s">发射</button> 
      </div> 
@@ -29,7 +41,9 @@
    <div id="users"> 
     <div id="online"></div> 
     <ol id="userlist"></ol> 
-   </div> 
+   </div>
+   
+ 
   </div> 
   <script type="text/javascript">
    $(function(){
@@ -63,7 +77,15 @@
           formatMsg(data);
         });
         socket.on(user+'send success',function(data){
-          $('#messages').append($('<li class="msg mine "><p><b>我</b>：<span>(' + formatTime(data.time) + ')</span></p><div>' + data.msg + '</div></li>'))
+         
+          if(data.type==2){
+            type = "我（悄悄话）";
+          }else{
+             type = "我";
+          }
+        $('#messages').append($('<li class="msg mine "><p><b>'+type+'</b>：<span>(' + formatTime(data.time) + ')</span></p><div>' + data.msg + '</div></li>'))
+
+          
         });
         socket.on('user coming',function(data){
           formatMsg(data);
@@ -149,7 +171,19 @@
         return str;
     }
 
+   
+
+
+
+
+
+
+
+
    });
+
+
+
  </script>  
  </body>
 </html>

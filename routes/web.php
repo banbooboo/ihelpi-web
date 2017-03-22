@@ -32,3 +32,7 @@ Route::resource('/docs','user\DocsController');
 Route::resource('/articles', 'user\ArticalController');
 
 Route::resource('/talk','user\TalkController');
+
+Route::get('/sisteradvice',function(){
+	return view('sisteradvice');
+});
