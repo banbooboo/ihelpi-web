@@ -93,7 +93,7 @@
            <div class="aw-item active" data-topic-id="1173">
             <a class="aw-user-name hidden-xs" data-id="4707" href="http://wenda.golaravel.com/people/yaobaliu" rel="nofollow"><img src="http://wenda.golaravel.com/static/common/avatar-max-img.png" alt="" /></a>
             <div class="aw-question-content">
-             <h4> <a href="/question/2469">{{ $answer->title }}</a> </h4>
+             <h4> <a href="/answer/{{ $answer->articalId }}">{{ $answer->title }}</a> </h4>
              <a href="/question/2469#!answer_form" class="pull-right text-color-999">回复</a>
              <p> <a href="/people/{{ $answer->userId }}" class="aw-user-name">{{ $answer->username  }}</a> <span class="text-color-999">发起了问题  {{      date("d",time() -  $answer->addtime)    }}天前 </span> <span class="text-color-999 related-topic hide"> </span> </p>
             </div>

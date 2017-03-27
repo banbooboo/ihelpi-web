@@ -90,7 +90,7 @@
 				</form>
 			</div>
 			<div class="side-bar pull-left">
-									<h3>第三方账号登录</h3>
+									<h3>账号登录</h3>
 											<a href="/account/openid/sina/" class="btn btn-block btn-weibo"><i class="icon icon-weibo"></i> 新浪微博登录</a>
 																<a href="/account/openid/qq_login/" class="btn btn-block btn-qq"> <i class="icon icon-qq"></i> QQ登录</a>
 																	</div>

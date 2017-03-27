@@ -38,7 +38,7 @@ class ArticalController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * 发布文章帖子 及 中文分词
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
@@ -60,8 +60,6 @@ class ArticalController extends Controller
         foreach ($content_list as $content) {
             $content_str .=$content.' ';
         }
-//      //  $userId=\Session::get('userguid');
-//
        $userId='a0aebb10c2214991b45476bc7b795a6f';
         $username='1';
         $addtime=time();
@@ -92,7 +90,7 @@ class ArticalController extends Controller
             }
         }
 
- return view('/404')->with('info','请先登陆!..')->with('url','/login');
+        return view('/404')->with('info','请先登陆!..')->with('url','/login');
 
     }
 

@@ -1,19 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\User;
+namespace App\Http\Controllers\user;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Store\AnswerStore;
-class AnswerController extends Controller
+
+class ReviewController extends Controller
 {
-
-    public function __construct()
-    {
-        $this->Answers = new AnswerStore();    // 获取用户Store层的对象
-    }
-
-
     /**
      * Display a listing of the resource.
      *
@@ -21,10 +14,7 @@ class AnswerController extends Controller
      */
     public function index()
     {
-
-      $info=  $this->Answers->getAllAnswer()->toArray();
-        return view('circle')->with('allAnswers',$info);
-        
+        //
     }
 
     /**
@@ -47,23 +37,19 @@ class AnswerController extends Controller
     {
         //
 
-         $username=$request['username'];
+        $username=$request['username'];
 
-         $content=$request['content'];
+        $content=$request['content'];
 
-         $articalId=$request["articalId"];
+        $articalId=$request["articalId"];
 
-         $info=['username'=>$username,'content'=>$content,'articalId'=>$articalId];
-         $res= \DB::table('review')->insert($info);
-         if(!$res){
-              return view('/404')->with('info',"提交失败");
+        $info=['username'=>$username,'content'=>$content,'articalId'=>$articalId];
+        $res= \DB::table('review')->insert($info);
+        if(!$res){
+             return view('/404')->with('info','提交失败');
          }
         
-         
-        return view('/index');
-
-
-
+        return view('/answer/'.$articalId);
 
     }
 
@@ -75,19 +61,7 @@ class AnswerController extends Controller
      */
     public function show($id)
     {
-       
-
-        $articalinfo=  $this->Answers->getOneAnswer($id)->toArray();
-        $allreview=$this->Answers->getAllReview($id);
-        
-        if($allreview){
-            $allreview=$allreview->toArray();
-            return view('articaldetail')->with('artical',$articalinfo)->with('allreview',$allreview);
-        }
-        return view('articaldetail')->with('artical',$articalinfo)->with('allreview',false);
-        
-
-
+        //
     }
 
     /**

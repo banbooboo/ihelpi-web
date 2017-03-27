@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::resource('/answer','user\ArticalController');
+Route::resource('/answer','user\AnswerController');
 
 Route::resource('/login','user\LoginController');
 
@@ -33,6 +33,9 @@ Route::resource('/articles', 'user\ArticalController');
 
 Route::resource('/talk','user\TalkController');
 
+// Route::resource('/review','user\ReviewController');
+
 Route::get('/sisteradvice',function(){
 	return view('sisteradvice');
 });
+
