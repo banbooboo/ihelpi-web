@@ -97,7 +97,8 @@ class IndexUserStore
 	public function userLogin($input)
     {   
 
-        $guid = $this->getGuid($input['user_name']);  //取出guid
+       // $guid = $this->getGuid($input['user_name']);  //取出guid
+        $guid='liutao';
         $password = md5($guid.$input['password']);    //md5(guid连接密码)
 
         $md = substr_replace($password,$guid,0,4);     
@@ -110,7 +111,8 @@ class IndexUserStore
 
 		if($infopassword[0]==$password){
 			\Session::put('userguid',$guid);
-			return true;
+           \Redis::set('username', $loginname);
+			return $loginname;
 		}
         return false;
     }

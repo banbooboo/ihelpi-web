@@ -61,7 +61,7 @@ class ArticalController extends Controller
             $content_str .=$content.' ';
         }
        $userId='a0aebb10c2214991b45476bc7b795a6f';
-        $username='1';
+        $username=\Redis::get('username');
         $addtime=time();
         if($userId){
             \DB::beginTransaction();    // 事物开始
@@ -81,7 +81,7 @@ class ArticalController extends Controller
                 $res=$res && $res1 && $res2 && $res3;
                 if($res){
                     \DB::commit();
-                    return view('/404')->with('info','发布成功!..')->with('url','/');
+                    return view('/404')->with('info','发布成功!..')->with('url','/answer');
 
                 }
             }catch(\PDOException $e){

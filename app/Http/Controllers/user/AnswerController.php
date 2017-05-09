@@ -15,14 +15,14 @@ class AnswerController extends Controller
 
 
     /**
-     * Display a listing of the resource.
+     * 问答社区所有问题页面
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
 
-      $info=  $this->Answers->getAllAnswer()->toArray();
+      $info=  $this->Answers->getAllAnswer();
         return view('circle')->with('allAnswers',$info);
         
     }
@@ -38,7 +38,7 @@ class AnswerController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * 回复评论
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
@@ -60,7 +60,8 @@ class AnswerController extends Controller
          }
         
          
-        return view('/index');
+        $info=  $this->Answers->getAllAnswer();
+        return view('circle')->with('allAnswers',$info);
 
 
 
@@ -68,7 +69,7 @@ class AnswerController extends Controller
     }
 
     /**
-     * Display the specified resource.
+     * 问题详情
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
@@ -79,15 +80,14 @@ class AnswerController extends Controller
 
         $articalinfo=  $this->Answers->getOneAnswer($id)->toArray();
         $allreview=$this->Answers->getAllReview($id);
-        
+        $name=\Redis::get('username');
+
         if($allreview){
             $allreview=$allreview->toArray();
-            return view('articaldetail')->with('artical',$articalinfo)->with('allreview',$allreview);
+            return view('articaldetail')->with('artical',$articalinfo)->with('allreview',$allreview)->with('name',$name);
         }
-        return view('articaldetail')->with('artical',$articalinfo)->with('allreview',false);
-        
-
-
+        return view('articaldetail')->with('artical',$articalinfo)->with('allreview',false)->with('name',$name);
+         
     }
 
     /**
@@ -123,4 +123,13 @@ class AnswerController extends Controller
     {
         //
     }
+
+    public function search(Request $request){
+
+       $this->Answers->search($request['fullsearch']);
+
+
+    }
+
+
 }

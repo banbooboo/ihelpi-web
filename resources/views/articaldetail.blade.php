@@ -19,7 +19,7 @@
     </div> 
     <!-- end logo --> 
     <!-- 搜索框 --> 
-    <div class="aw-search-box  hidden-xs hidden-sm"> 
+    <!-- <div class="aw-search-box  hidden-xs hidden-sm"> 
      <form class="navbar-search" action="http://wenda.golaravel.com/search/" id="global_search_form" method="post"> 
       <input class="form-control search-query" type="text" placeholder="搜索问题、话题或人" autocomplete="off" name="q" id="aw-search-query" /> 
       <span title="搜索" id="global_search_btns" onclick="$('#global_search_form').submit();"><i class="icon icon-search"></i></span> 
@@ -34,7 +34,7 @@
        </div> 
       </div> 
      </form> 
-    </div> 
+    </div>  -->
     <!-- end 搜索框 --> 
     <!-- 导航 --> 
     <div class="aw-top-nav navbar"> 
@@ -44,7 +44,7 @@
      <nav role="navigation" class="collapse navbar-collapse bs-navbar-collapse"> 
       <ul class="nav navbar-nav"> 
        <li><a href="" class="active">发现</a></li>
-       <li><a href="http://wenda.golaravel.com/topic/">话题</a></li> 
+       <li><a href="/answer">首页</a></li> 
       </ul> 
      </nav> 
     </div> 
@@ -100,7 +100,7 @@
     <div class="row" >
       <form class="col-md-12" action="/answer" method="post">
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
-        <input value="1" class="hidden" name="username"></input>
+        <input value="{{ $name}}" class="hidden" name="username"></input>
         <input value="{{$artical[0]->articalId}}" class="hidden" name="articalId"></input>
         <textarea placeholder="输入内容" class="col-md-12" name="content"></textarea>
         <br>

@@ -64,7 +64,7 @@ class LoginController extends Controller
 //        $info=$this->IndexUser->getUserInfo($uid);
 //
 //        \ Session::put('indexlogin',$info);
-        return redirect('/');
+        return view('/index')->with('info',$login);
         
     }
 

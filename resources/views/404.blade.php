@@ -41,10 +41,10 @@
     </head>
     
     <script>
-        // setTimeout(function(){
-        //     window.location.href="{{$url or '/'}}";
+        setTimeout(function(){
+            window.location.href="{{$url or '/'}}";
 
-        // },3000)
+        },3000)
     </script>
     
     

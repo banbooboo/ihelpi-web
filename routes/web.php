@@ -39,3 +39,4 @@ Route::get('/sisteradvice',function(){
 	return view('sisteradvice');
 });
 
+Route::post('/search','user\AnswerController@search');

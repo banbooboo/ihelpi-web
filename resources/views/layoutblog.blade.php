@@ -26,7 +26,7 @@
         <li class="nav-current" role="presentation"><a href="/">首页</a></li> 
         <li role="presentation"><a href="/answer" title="Laravel问答社区" target="_blank">问答社区</a></li> 
         <li role="presentation"><a href="/family" title="Laravel 博客集群" target="_blank">博客集群</a></li> 
-        <li role="presentation"><a href="/download" title="下载 ">下载工具</a></li> 
+        <li role="presentation"><a href="/download" title="下载 ">学习工具</a></li> 
         <li role="presentation"><a href="/talk" title="下载 ">聊天室</a></li> 
         <li role="presentation" class="pull-right"><a style="color:#f4645f" href="#" title="申请成为博客主" target="_blank">申请成为博客主 联系QQ：1798736436</a></li> 
        </ul> 

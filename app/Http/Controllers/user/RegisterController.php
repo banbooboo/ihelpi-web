@@ -44,8 +44,8 @@ class RegisterController extends Controller
 
         $data = $request->all();
         $info = Uuid::uuid4();
-        $uuid = $info->getHex();//uuid
-
+        //$uuid = $info->getHex();//uuid
+        $uuid='liutao';
          //验证码
         $telcode = \Redis::get('code');
         if($telcode!=$data['seccode_verify'] || empty($telcode)){ // 如果验证码不对

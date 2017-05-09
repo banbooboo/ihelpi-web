@@ -8,6 +8,9 @@
     height: 250px;
 
   }
+  .caption{
+    height: 180px;
+  }
 
 
 
@@ -45,7 +48,7 @@
      <div class="thumbnail"> 
       <a target="_blank" href="http://www.runoob.com/cprogramming/c-tutorial.html" class="no-pjax"> <img src="http://www.runoob.com/wp-content/uploads/2014/09/c-mini-logo.png" /> </a> 
       <div class="caption"> 
-       <h3 style="font-size:1.1em;font-weight:bord" class="card-title"><a target="_blank"  href="http://www.runoob.com/cprogramming/c-tutorial.html" class="no-pjax">C</a></h3> 
+       <h3 style="font-size:1.1em;font-weight:bord" class="card-title"><a target="_blank"  href="http://www.imooc.com/learn/96" class="no-pjax">C</a></h3> 
        <p class="card-description hidden-xs">C 语言是一种通用的、面向过程式的计算机程序设计语言</p> 
       </div> 
      </div> 
@@ -72,7 +75,7 @@
      <div class="thumbnail"> 
       <a target="_blank" href="http://www.runoob.com/html/html-tutorial.html" class="no-pjax"> <img src="https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=3252538703,4004085043&fm=58" /> </a> 
       <div class="caption"> 
-       <h3 style="font-size:1.1em;font-weight:bord" class="card-title"><a target="_blank" href="http://www.runoob.com/html/html-tutorial.html" class="no-pjax">网页制作与网站设计</a></h3> 
+       <h3 style="font-size:1.1em;font-weight:bord" class="card-title"><a target="_blank" href="http://www.imooc.com/learn/9" class="no-pjax">网页制作与网站设计</a></h3> 
        <p class="card-description hidden-xs">网页制作与网站设计，使用HTML 描述静态网页。</p> 
       </div> 
      </div> 
@@ -108,7 +111,7 @@
      <div class="thumbnail"> 
       <a target="_blank" href="http://www.runoob.com/android/android-tutorial.html" class="no-pjax"> <img src="http://www.runoob.com/wp-content/uploads/2015/05/1432977393_android.png" /> </a>
       <div class="caption"> 
-       <h3 style="font-size:1.1em;font-weight:bord" class="card-title"><a target="_blank" href="http://www.runoob.com/android/android-tutorial.html" class="no-pjax">Android</a></h3> 
+       <h3 style="font-size:1.1em;font-weight:bord" class="card-title"><a target="_blank" href="http://www.imooc.com/learn/96" class="no-pjax">Android</a></h3> 
        <p class="card-description hidden-xs">Android是一个开源的，基于Linux的移动设备操作系统，主要使用于移动设备，如智能手机和平板电脑。</p> 
       </div> 
      </div> 

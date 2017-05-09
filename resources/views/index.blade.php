@@ -39,7 +39,7 @@
         <li class="nav-current" role="presentation"><a href="/">首页</a></li> 
         <li role="presentation"><a href="/answer" title="Laravel问答社区" target="_blank">问答社区</a></li> 
         <li role="presentation"><a href="/family" title="Laravel 博客集群" target="_blank">博客集群</a></li> 
-        <li role="presentation"><a href="/download" title="下载 ">下载工具</a></li>
+        <li role="presentation"><a href="/download" title="下载 ">学习工具</a></li>
         <li role="presentation"><a href="/talk" title="下载 ">聊天室</a></li>
        </ul> 
       </div> 
@@ -55,20 +55,20 @@
      <main class="col-md-8 main-content"> 
       <article id="73" class="post"> 
        <div class="post-head"> 
-        <h1 class="post-title"><a href="/post/laravel-5-5-will-be-the-next-lts-release/">Laravel 5.5 将是下一个 LTS 版本，预计 7/8 月份发布</a></h1> 
+        <h1 class="post-title"><a href="/post/laravel-5-5-will-be-the-next-lts-release/">微信小程序开发初篇</a></h1> 
         <div class="post-meta"> 
          <span class="author">作者：<a href="/author/wangsai/">banbooboo</a></span> • 
          <time class="post-date" datetime="2017年2月21日星期二凌晨3点21分" title="2017年2月21日星期二凌晨3点21分">2017年2月21日</time> 
         </div> 
        </div> 
        <div class="featured-media"> 
-        <a href="/post/laravel-5-5-will-be-the-next-lts-release/"><img src="http://image.golaravel.com/b/60/0540baaed781628b02aac992d1c8f.png" alt="Laravel 5.5 将是下一个 LTS 版本，预计 7/8 月份发布" /></a> 
+        <a href="/post/laravel-5-5-will-be-the-next-lts-release/"><img src="https://mp.weixin.qq.com/debug/wxadoc/dev/image/setting.png?t=2017213" alt="Laravel 5.5 将是下一个 LTS 版本，预计 7/8 月份发布" /></a> 
        </div> 
        <div class="post-content"> 
-        <p>Laravel 的上一个 LTS（长期支持）版本是 Laravel 5.1，发布于 2015 年 6 月，按照对 LTS 版本的约定，两年的 bug 修复支持到今年中旬就结束了，所以今年中旬必然要出一个 LTS 后继版本，就是 Laravel 5.5。 今天 Laravel 官方在 twitter 上发布消息，Lara</p> 
+        <p>我们明白了微信小程序的产品理念、特性和定位，相信会为我们确定到底什么产品是更适合做小程序的，如果是为了继续积累客户、推广产品而做小程序，那么绝对是不符合小程序理念的。小程序开发的目的就是为了高效的去提高用户体验。</p> 
        </div> 
        <div class="post-permalink"> 
-        <a href="/post/laravel-5-5-will-be-the-next-lts-release/" class="btn btn-default">阅读全文</a> 
+        <a href="" class="btn btn-default">阅读全文</a> 
        </div> 
        <footer class="post-footer clearfix"> 
         <div class="pull-left tag-list"> 
@@ -80,7 +80,7 @@
       </article> 
       <nav class="pagination" role="navigation"> 
        <span class="page-number">第 1 页 ⁄ 共 6 页</span> 
-       <a class="older-posts" href="/page/2/"><i class="fa fa-angle-right"></i></a> 
+       <a class="older-posts" href="/page/2/"><i class="fa">1</i></a> 
       </nav> 
      </main> 
      <aside class="col-md-4 sidebar"> 
@@ -104,7 +104,7 @@
       </div> 
       <!-- end widget --> 
       <!-- start tag cloud widget --> 
-      <div class="widget"> 
+    <!--   <div class="widget"> 
        <h4 class="title">标签云</h4> 
        <div class="content tag-cloud"> 
         <a href="/tag/laravel">Laravel </a> 
@@ -117,7 +117,7 @@
         <a href="/tag/git/">git</a> 
         <a href="/tag/other">...</a> 
        </div> 
-      </div> 
+      </div>  -->
       <!-- end tag cloud widget --> 
       <!-- start widget --> 
       <!-- end widget --> 
@@ -130,7 +130,7 @@
   <footer class="main-footer"> 
    <div class="container"> 
     <div class="row"> 
-     <div class="col-sm-4"> 
+     <!-- <div class="col-sm-4"> 
       <div class="widget"> 
        <h4 class="title">最新文章</h4> 
        <div class="content recent-post"> 
@@ -154,8 +154,8 @@
         </div> 
        </div> 
       </div> 
-     </div> 
-     <div class="col-sm-4"> 
+     </div>  -->
+   <!--   <div class="col-sm-4"> 
       <div class="widget"> 
        <h4 class="title">标签云</h4> 
        <div class="content tag-cloud"> 
@@ -170,7 +170,7 @@
         <a href="/tag/other">...</a> 
        </div> 
       </div> 
-     </div> 
+     </div>  -->
      <div class="col-sm-4"> 
       <div class="widget"> 
        <h4 class="title">友情连接</h4> 

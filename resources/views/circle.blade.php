@@ -21,19 +21,11 @@
     <!-- end logo --> 
     <!-- 搜索框 --> 
     <div class="aw-search-box  hidden-xs hidden-sm"> 
-     <form class="navbar-search" action="http://wenda.golaravel.com/search/" id="global_search_form" method="post"> 
-      <input class="form-control search-query" type="text" placeholder="搜索问题、话题或人" autocomplete="off" name="q" id="aw-search-query" /> 
-      <span title="搜索" id="global_search_btns" onclick="$('#global_search_form').submit();"><i class="icon icon-search"></i></span> 
-      <div class="aw-dropdown"> 
-       <div class="mod-body"> 
-        <p class="title">输入关键字进行搜索</p> 
-        <ul class="aw-dropdown-list hide"></ul> 
-        <p class="search"><span>搜索:</span><a onclick="$('#global_search_form').submit();"></a></p> 
-       </div> 
-       <div class="mod-footer"> 
-        <a href="" onclick="$('#header_publish').click();" class="pull-right btn btn-mini btn-success publish">发起问题</a> 
-       </div> 
-      </div> 
+     <form class="navbar-search" action="/search" id="global_search_form" method="post">
+      <input type="hidden" name="_token" value="{{ csrf_token() }}" />
+      <input class="form-control search-query" type="text" placeholder="搜索问题、话题或人"  name="fullsearch" id="aw-search-query" /> 
+      <span id="global_search_btns" onclick="$('#global_search_form').submit();"> <span >搜索</span></span> 
+
      </form> 
     </div> 
     <!-- end 搜索框 --> 
@@ -44,8 +36,7 @@
      </div> 
      <nav role="navigation" class="collapse navbar-collapse bs-navbar-collapse"> 
       <ul class="nav navbar-nav"> 
-       <li><a href="" class="active">发现</a></li>
-       <li><a href="http://wenda.golaravel.com/topic/">话题</a></li> 
+       <li><a href="/articles">提出问题</a></li> 
       </ul> 
      </nav> 
     </div> 
@@ -104,20 +95,16 @@
         <div class="mod-footer"> 
          <div class="page-control">
           <ul class="pagination pull-right">
-           <li class="active"><a href="javascript:;">1</a></li>
-           <li><a href="http://wenda.golaravel.com/sort_type-new__day-0__is_recommend-0__page-2">2</a></li>
-           <li><a href="http://wenda.golaravel.com/sort_type-new__day-0__is_recommend-0__page-3">3</a></li>
-           <li><a href="http://wenda.golaravel.com/sort_type-new__day-0__is_recommend-0__page-4">4</a></li>
-           <li><a href="http://wenda.golaravel.com/sort_type-new__day-0__is_recommend-0__page-2">&gt;</a></li>
-           <li><a href="http://wenda.golaravel.com/sort_type-new__day-0__is_recommend-0__page-54">&gt;&gt;</a></li>
+           {!! $allAnswers->render() !!}
+           
           </ul>
          </div> 
         </div> 
        </div> 
       </div> 
       <!-- 侧边栏 --> 
-      <div class="col-sm-12 col-md-3 aw-side-bar hidden-xs hidden-sm"> 
-       <div class="aw-mod"> 
+      <!-- <div class="col-sm-12 col-md-3 aw-side-bar hidden-xs hidden-sm">  -->
+      <!--  <div class="aw-mod"> 
         <div class="mod-head"> 
          <h3>专题</h3> 
         </div> 
@@ -126,8 +113,8 @@
           <li><a href="http://wenda.golaravel.com/feature/1">Composer中国镜像</a></li> 
          </ul> 
         </div> 
-       </div> 
-       <div class="aw-mod aw-text-align-justify"> 
+       </div>  -->
+      <!--  <div class="aw-mod aw-text-align-justify"> 
         <div class="mod-head"> 
          <a href="/topic/channel-hot" class="pull-right">更多 &gt;</a> 
          <h3>热门话题</h3> 
@@ -179,8 +166,8 @@
           </dd> 
          </dl> 
         </div> 
-       </div> 
-       <div class="aw-mod aw-text-align-justify"> 
+       </div>  -->
+    <!--    <div class="aw-mod aw-text-align-justify"> 
         <div class="mod-head"> 
          <a href="/people/" class="pull-right">更多 &gt;</a> 
          <h3>热门用户</h3> 
@@ -237,8 +224,8 @@
           </dd> 
          </dl> 
         </div> 
-       </div> 
-      </div> 
+       </div>  -->
+      <!-- </div>  -->
       <!-- end 侧边栏 --> 
      </div> 
     </div> 
